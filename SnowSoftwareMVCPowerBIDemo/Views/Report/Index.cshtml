@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Sample Report";
+}
+
+<div class="row">
+    <div class="page-title-container">
+        <div class="title_wrapper"><div class="page-title">Report: @ViewBag.ReportTitle</div><div class="editdashboard">Edit</div><div id="ellipsis_wrapper"><img id="ellipsis"></div></div>
+        <div class="subtitle">@ViewBag.SubTitle</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        @*<div class="largereport"><img id="versionuptake" /></div>*@
+        <div class="largereport"><img id="chart1" src="@ViewBag.Chart1Source" /></div>
+    </div>
+    <div class="col-lg-6">
+        @*<div class="largereport"><img id="numofcrashes" /></div>*@
+        <div class="largereport"><img id="chart2" src="@ViewBag.Chart2Source" /></div>
+    </div>
+</div>

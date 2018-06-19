@@ -1,0 +1,57 @@
+﻿<head>
+    <style>
+        .sidenav {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 60px;
+            left: 0;
+            background-color: #595959;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+            .sidenav a {
+                padding: 5px 5px 5px 5px;
+                text-decoration: none;
+                font-size: 12px;
+                color: #f1f1f1;
+                display: block;
+                font-family: GeogrotesqueLight;
+            }
+
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+
+        li#dashboard {
+            list-style-image: url('../../Assets/baseline_dashboard_white_18dp.png');
+        }
+
+        li#reportsparent {
+            list-style-image: url('../../Assets/baseline_insert_chart_white_18dp.png');
+        }
+
+        ul#reports {
+            list-style-image: url('../../Assets/baseline_insert_chart_outlined_white_18dp.png');
+        }
+
+        li a {
+            line-height: 80%;
+        }
+    </style>
+</head>
+<div class="sidenav">
+    <ul id="nav">
+        <li id="dashboard"><a href="#">@Html.ActionLink("Dashboard", "Index", "Home")</a></li>
+        <li id="reportsparent">
+            <a href="#">Reports</a>
+            <ul id="reports">
+            <li id="VersionsMenuItem">@Html.ActionLink("Versions", "Index", "Report",new { reportNum = 1 },null)</li>
+            <li id="UsersMenuItem">@Html.ActionLink("Users", "Index", "Report", new { reportNum = 2 }, null)</li>
+            <li>@Html.ActionLink("Licenses", "Index", "Report", new { reportNum = 3 }, null)</li>
+        </ul>
+    </li>
+</ul>
+</div>
